@@ -19,7 +19,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/login", {
+      const response = await fetch("http://192.168.1.10:5000/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -88,6 +88,7 @@ const LoginPage = () => {
               </div>
               <input
                 type="email"
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 bg-[#e1f5f5] text-gray-700 text-base md:text-lg rounded-lg block w-full p-3 md:p-4 focus:outline-none focus:ring-2 focus:ring-teal-500"
@@ -104,6 +105,7 @@ const LoginPage = () => {
               </div>
               <input
                 type="password"
+                name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="flex-1 bg-[#e1f5f5] text-gray-700 text-base md:text-lg rounded-lg block w-full p-3 md:p-4 focus:outline-none focus:ring-2 focus:ring-teal-500"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Search, ChevronDown, Plus } from "lucide-react";
-import UserTable from '../../components/usertable';
+import UserTable from '../../components/UserTable';
 
 const UserManagement = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -69,7 +69,7 @@ const UserManagement = () => {
       </div>
 
       {/* User Table */}
-      <UserTable />
+      <UserTable  />
     </div>
   );
 };
